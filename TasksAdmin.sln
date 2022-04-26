@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksAdmin", "TasksAdmin\TasksAdmin.csproj", "{105833C0-4F14-426F-9120-DF351ECF9634}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ManagerTasks_DB", "ManagerTasks_DB\ManagerTasks_DB.sqlproj", "{BAF3B311-AF70-44EE-B919-920645D2D412}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{105833C0-4F14-426F-9120-DF351ECF9634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105833C0-4F14-426F-9120-DF351ECF9634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105833C0-4F14-426F-9120-DF351ECF9634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105833C0-4F14-426F-9120-DF351ECF9634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF3B311-AF70-44EE-B919-920645D2D412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF3B311-AF70-44EE-B919-920645D2D412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF3B311-AF70-44EE-B919-920645D2D412}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BAF3B311-AF70-44EE-B919-920645D2D412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF3B311-AF70-44EE-B919-920645D2D412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF3B311-AF70-44EE-B919-920645D2D412}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38C1319E-80FA-4F55-B2D9-E20040E5EDC8}
+	EndGlobalSection
+EndGlobal
