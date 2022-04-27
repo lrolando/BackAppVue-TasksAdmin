@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using TasksAdmin.Business;
 using TasksAdmin.DataAccess;
 using TasksAdmin.Models;
+using TasksAdmin.UnitOfWork;
 
 namespace TasksAdmin
 {
@@ -37,6 +38,7 @@ namespace TasksAdmin
                                   });
             });
 
+            services.AddSingleton<TasksManager_DBContext, TasksManager_DBContext>();
             services.AddScoped<ITaskRepository<TaskItem>, TaskRepository>();
 
 

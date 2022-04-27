@@ -11,10 +11,10 @@ namespace TasksAdmin.DataAccess
         public Task<List<T>> GetItems(Boolean IsActive);
 
         //public Task<List<T>> GetCompleteItems(Boolean IsActive);
-        public Task<List<T>> SaveNewItems(TaskItem newItem);
+        public void SaveNewItems(TaskItem newItem);
 
-        public Task<List<T>> DeleteItems(TaskItem newItem);
+        public void DeleteItems(TaskItem newItem);
 
-        public Task<List<T>> UpdateItems(TaskItem newItem);
+        public void UpdateItems(TaskItem newItem);
     }
 }

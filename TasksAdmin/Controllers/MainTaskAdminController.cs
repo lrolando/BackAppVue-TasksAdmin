@@ -38,45 +38,25 @@ namespace TasksAdmin.Controllers
         }
 
         [HttpPost]
-        public async Task<List<TaskItem>> SaveNewItem([FromBody] TaskItem value)
+        public void SaveNewItem([FromBody] TaskItem value)
         {
-            return await _taskRepository.SaveNewItems(value);
+            _taskRepository.SaveNewItems(value);
         }
 
         [HttpDelete]
-        public async Task<List<TaskItem>> DeleteItem([FromBody] TaskItem value)
+        public void DeleteItem([FromBody] TaskItem value)
         {
 
-            return await _taskRepository.DeleteItems(value);
+            _taskRepository.DeleteItems(value);
 
         }
 
             
         [HttpPut]
-        public async Task<List<List<TaskItem>>> UpdateItem([FromBody] TaskItem value)
+        public void UpdateItem([FromBody] TaskItem value)
         {
 
-            var ListTotal = await _taskRepository.UpdateItems(value);
-
-            List<List<TaskItem>> respList = new List<List<TaskItem>>();
-            List<TaskItem> ListP = new List<TaskItem>();
-            List<TaskItem> ListC = new List<TaskItem>();
-
-            foreach (var item in ListTotal)
-            {
-                if (item.Active==true)
-                {
-                    ListP.Add(item);
-                }
-                else
-                {
-                    ListC.Add(item);
-                }
-            }
-            respList.Add(ListP);
-            respList.Add(ListC);
-
-            return respList;
+            _taskRepository.UpdateItems(value);
 
         }
 
