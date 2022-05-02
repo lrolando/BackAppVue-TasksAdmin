@@ -38,7 +38,7 @@ namespace TasksAdmin
                                   });
             });
 
-            services.AddSingleton<TasksManager_DBContext, TasksManager_DBContext>();
+            services.AddScoped<TasksManager_DBContext, TasksManager_DBContext>();
             services.AddScoped<ITaskRepository<TaskItem>, TaskRepository>();
 
 

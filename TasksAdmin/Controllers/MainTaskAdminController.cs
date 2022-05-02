@@ -25,22 +25,22 @@ namespace TasksAdmin.Controllers
         }
 
         //GET: api/<ValuesController>
-        [HttpGet]
-        public async Task<List<TaskItem>> GetPendingItems()
-        {
-            return await _taskRepository.GetItems(true);
-        }
+        //[HttpGet]
+        //public async Task<List<TaskItem>> GetPendingItems()
+        //{
+        //    return await _taskRepository.GetItems(true);
+        //}
 
         [HttpGet]
-        public async Task<List<TaskItem>> GetCompleteItems()
+        public async Task<List<TaskItem>> GetItems()
         {
-            return await _taskRepository.GetItems(false);
+            return await _taskRepository.GetItems();
         }
 
         [HttpPost]
-        public void SaveNewItem([FromBody] TaskItem value)
+        public async Task<TaskItem> SaveNewItem([FromBody] TaskItem value)
         {
-            _taskRepository.SaveNewItems(value);
+            return await _taskRepository.SaveNewItems(value);
         }
 
         [HttpDelete]

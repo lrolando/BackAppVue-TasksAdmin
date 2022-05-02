@@ -22,26 +22,27 @@ namespace TasksAdmin.DataAccess
 
         }
 
-        public async Task<List<TaskItem>> GetItems(Boolean IsActive) 
+        public async Task<List<TaskItem>> GetItems() 
         {
             List<TaskItem> ListTI = null;
 
             ListTI = await (from a in _tasksManager_DBContext.Tasks 
-                            where a.Active==IsActive
                             select a).ToListAsync();
 
             return ListTI;
         }
 
        
-        public void SaveNewItems(TaskItem newItem)
+        public async Task<TaskItem> SaveNewItems(TaskItem newItem)
         {
             var nI = new TaskItem()
             { Description = newItem.Description, 
               Active = true};
             _tasksManager_DBContext.Tasks.Add(nI);
             _tasksManager_DBContext.SaveChanges();
+            var nItem = nI.Id;
 
+            return nI;
         }
 
         public void DeleteItems(TaskItem Item)
